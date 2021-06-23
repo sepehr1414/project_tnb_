@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<ul>
+<li><h1 style= "text-align:right ; padding-top:100px; padding-right:60px;" >نام غذا : {{obj.name}}</h1></li>
+<li><h3 style= "text-align:right ; padding-top:10px; padding-right:60px;">درباره غذا : {{obj.desc}}</h3></li>
+<li><h3 style= "text-align:right ; padding-top:10px; padding-right:60px;"> {{obj.price}} : قیمت</h3></li>
+<li style= "text-align:center ; padding-bottom:90px; padding-left:60px;"><img src="{{obj.image.url}}" alt="image" width="500px" height="400px"></li>
+</ul>
+{% endblock content %}

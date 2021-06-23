@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="menu-box">
+        <div class="container">
+                <div class="row">
+                        <div class="col-lg-12">
+                                <div class="heading-title text-center">
+                                </div>
+                        </div>
+                </div>
+                        
+                <div class="row special-list">
+                        {% for food in foods %}
+                        <div class="col-lg-4 col-md-6 special-grid lunch">
+                                <a href="{{food.id}}/food/">
+                                <div class="gallery-single fix">
+                                        <img src="{{food.image.url}}" class="img-fluid" alt="Image">
+                                        <div class="why-text">
+                                                <h3 style="color: white;">{{food.name}}</h3>
+                                                <p>{{food.desc}}</p>
+                                                <h5>{{food.price}} تومان</h5>
+                                        </div>
+                                </div>
+                                </a>
+                        </div>
+                        {% endfor %}              
+                        </div>
+                </div>
+        </div>
+</div>
+
+</body>
+</html>
+{% endblock content %}
